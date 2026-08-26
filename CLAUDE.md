@@ -5,7 +5,7 @@ Paraglide 連携前提の翻訳管理システム。OpenRouter (Opus) LLM で自
 ## Architecture
 
 ```
-Svelte App (Paraglide)
+Consumer App (Paraglide)
   ├─ messages/{lang}.json  ← TMS が生成・管理
   └─ project.inlang/settings.json  ← TMS が言語タグ管理
         ↓
@@ -16,6 +16,12 @@ Svelte App (Paraglide)
     ├─ memory.lookup()      → 翻訳メモリ (KV)
     └─ glossary.set/get()   → 用語統一
 ```
+
+`Consumer App (Paraglide)` は TMS が翻訳カタログを生成・管理する対象の
+任意の Paraglide 利用プロジェクトを指し、この repo 自身の admin UI とは別物。
+この repo 自身の frontend（`appview/etzhayyim-wasm-tms-tm5x7k9q/cljs`）は
+ClojureScript（reagent + re-frame + jp-go-dds）— 旧 Svelte scaffold
+（`svelte/`）は移行に伴い削除済み。
 
 ## Gaming Population Languages (Priority)
 

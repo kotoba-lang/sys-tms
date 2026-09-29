@@ -9,7 +9,7 @@
   event -> db -> sub -> view round-trip through re-frame instead of being
   static markup, and renders through jp-go-dds.core (デジタル庁デザイン
   システム) instead of hand-rolled CSS. The next real feature (a TMS
-  dashboard: translate / catalogs / glossary, per CLAUDE.md) grows this db
+  dashboard: translate / catalogs / glossary, per AGENTS.md) grows this db
   instead of replacing a no-op one."
   (:require [reagent.dom :as rdom]
             [re-frame.core :as rf]
